@@ -1,0 +1,23 @@
+{
+    "name": "motters/image-safe",
+    "version": "0.0.1",
+    "description": "Ensure a file is a vaid image with a set of specifications.",
+    "type": "library",
+    "keywords": ["validation", "image", "file", "upload"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sam Mottley",
+            "email": "sammottley@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Motters\\ImageSafe\\": "src/"
+        }
+    }
+}
