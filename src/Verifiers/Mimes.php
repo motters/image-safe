@@ -63,7 +63,7 @@ class Mimes{
 		//Find file mimes type
 		$findMime = new \finfo();
 		$mime = $findMime->file($this->file, FILEINFO_MIME);
-		
+
 		//Compare file mimes tpye with allowed types
 		if(in_array($mime, $this->rules['imageMimes']['allowed']))
 		{

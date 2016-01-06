@@ -77,7 +77,7 @@ class ImageSafe {
 	 */
 	public function runVerifications($verifier, $file)
 	{
-		if(!empty($this->rules[str_replace('check', 'image', $verifier)]) or in_array(str_replace('check', 'image', $verifier), $this->rules) ){
+		if(!empty($this->rules[$verifier]) or in_array(str_replace('check', 'image', $verifier), $this->rules) ){
 			$class = "Motters\\ImageSafe\\Verifiers\\".$verifier;
 			$verify = new $class($file, $this->rules);
 			return $verify->valid();
@@ -98,7 +98,12 @@ class ImageSafe {
 				if(!$result)
 					return $result;
 			}
+		}else{
+			$result = $this->runVerifications($verifier, $this->file);
+			if(!$result)
+				return $result;
 		}
+
 		return true;
 	}
 
