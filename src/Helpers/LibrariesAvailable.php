@@ -31,7 +31,7 @@ class LibrariesAvailable {
 
 		}
 
-		throw new \Motters\ImageSafe\Exceptions\ExecutionException('The php based library '.$library.' can not be found on the server.');
+		throw new \Motters\ImageSafe\Exceptions\MissingLibraryException('The php based library '.$library.' can not be found on the server.');
 
 	}
 

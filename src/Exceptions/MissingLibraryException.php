@@ -1,7 +1,7 @@
 <?php
 namespace Motters\ImageSafe\Exceptions;
 
-class ExecutionException extends \Exception
+class MissingLibraryException extends \Exception
 {
     public function __construct($message, $code = 0, Exception $previous = null)
     {

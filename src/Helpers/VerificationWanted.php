@@ -61,7 +61,7 @@ class VerificationWanted {
 				else
 				{
 					//Throw Exception
-					throw new RequestedMissLibraryNotFound('The library you required to be skipped was not found in the list of possable libraries.');
+					throw new RequestedMissLibraryNotFound('The library you required to be skipped was not found in the list of passable libraries.');
 				}
 
 			}

@@ -40,7 +40,8 @@ class FileExtension{
 	public function getImageFullExtension( $file )
 	{
 		$fileExt = explode('.',$file);
-		return substr(str_replace($fileExt[0], '', $file), 1);
+		return $fileExt[count($fileExt)-1];
+		//return substr(str_replace($fileExt[0], '', $file), 1);
 	}
 
 	public function valid()
