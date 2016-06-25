@@ -41,18 +41,18 @@ class Characters{
 	protected function settings()
 	{
 		//Un ban characters
-		if(!empty( $this->rules['imageCharacters']['unbanCharacters']))
-			$this->disallowed = array_diff($this->disallowed, $this->rules['imageCharacters']['unbanCharacters']);
+		if(!empty( $this->rules['Characters']['unbanCharacters']))
+			$this->disallowed = array_diff($this->disallowed, $this->rules['Characters']['unbanCharacters']);
 		//Addtional banned characters
-		if(!empty( $this->rules['imageCharacters']['addbanCharacters']))
-			$this->disallowed = array_merge($this->disallowed, $this->rules['imageCharacters']['addbanCharacters']);
+		if(!empty( $this->rules['Characters']['addbanCharacters']))
+			$this->disallowed = array_merge($this->disallowed, $this->rules['Characters']['addbanCharacters']);
 
 		//Addtional  removal characters
-		if(!empty( $this->rules['imageCharacters']['addremoveCharacters']))
-			$this->remove = array_merge($this->remove, $this->rules['imageCharacters']['addremoveCharacters']);
+		if(!empty( $this->rules['Characters']['Characters']))
+			$this->remove = array_merge($this->remove, $this->rules['Characters']['addremoveCharacters']);
 		//Remove removal characters
-		if(!empty( $this->rules['imageCharacters']['unremoveCharacters']))
-			$this->remove = array_diff($this->remove, $this->rules['imageCharacters']['unremoveCharacters']);
+		if(!empty( $this->rules['Characters']['Characters']))
+			$this->remove = array_diff($this->remove, $this->rules['Characters']['unremoveCharacters']);
 	}
 
 	/**

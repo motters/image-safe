@@ -42,11 +42,11 @@ class FileSize{
 	 */
 	protected function setDefaultRules()
 	{
-		if(empty($this->rules['imageFileSize']['maximum']))
-			$this->rules['imageFileSize']['maximum'] = '2097152';
+		if(empty($this->rules['FileSize']['maximum']))
+			$this->rules['FileSize']['maximum'] = '2097152';
 
-		if(empty($this->rules['imageFileSize']['minimum']))
-			$this->rules['imageFileSize']['minimum'] = '10240';
+		if(empty($this->rules['FileSize']['minimum']))
+			$this->rules['FileSize']['minimum'] = '10240';
 	}
 
 	/** 
@@ -55,14 +55,14 @@ class FileSize{
 	protected function setImageRequiredSize()
 	{
 		//Set image maximum file size
-		if(!empty($this->rules['imageFileSize']['maximum']))
+		if(!empty($this->rules['FileSize']['maximum']))
 		{	
-			$this->maxSize = (int) $this->rules['imageFileSize']['maximum'];
+			$this->maxSize = (int) $this->rules['FileSize']['maximum'];
 		}
 		//Set image minimum file size
-		if(!empty($this->rules['imageFileSize']['minimum']))
+		if(!empty($this->rules['FileSize']['minimum']))
 		{	
-			$this->minSize = (int) $this->rules['imageFileSize']['minimum'];
+			$this->minSize = (int) $this->rules['FileSize']['minimum'];
 		}
 	}
 

@@ -54,14 +54,14 @@ class DimensionSize{
 	protected function setImageRequiredSize()
 	{
 		//Set image maximum size
-		if(!empty($this->rules['imageDimensionSize']['height']))
+		if(!empty($this->rules['DimensionSize']['height']))
 		{	
-			$this->imageHeight = (int) $this->rules['imageDimensionSize']['height'];
+			$this->imageHeight = (int) $this->rules['DimensionSize']['height'];
 		}
 		//Set image minimum size
-		if(!empty($this->rules['imageDimensionSize']['width']))
+		if(!empty($this->rules['DimensionSize']['width']))
 		{	
-			$this->imageWidth = (int) $this->rules['imageDimensionSize']['width'];
+			$this->imageWidth = (int) $this->rules['DimensionSize']['width'];
 		}
 	}
 

@@ -44,9 +44,9 @@ class Mimes{
 	 */
 	protected function setDefaultRules()
 	{
-		if(empty($this->rules['imageMimes']['allowed']))
+		if(empty($this->rules['Mimes']['allowed']))
 		{
-			$this->rules['imageMimes']['allowed'] = [
+			$this->rules['Mimes']['allowed'] = [
 				'image/jpeg; charset=binary', 
 				'image/jpg; charset=binary',
 				'image/png; charset=binary',
@@ -65,7 +65,7 @@ class Mimes{
 		$mime = $findMime->file($this->file, FILEINFO_MIME);
 
 		//Compare file mimes tpye with allowed types
-		if(in_array($mime, $this->rules['imageMimes']['allowed']))
+		if(in_array($mime, $this->rules['Mimes']['allowed']))
 		{
 			return true;
 		}

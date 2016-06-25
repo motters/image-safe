@@ -30,14 +30,14 @@ class FileName{
 	 */
 	protected function setDefaultRules()
 	{
-		if(empty($this->rules['imageFileName']['allowed']))
-			$this->rules['imageFileName']['allowed'] = ['-','_',' '];
+		if(empty($this->rules['FileName']['allowed']))
+			$this->rules['FileName']['allowed'] = ['-','_',' '];
 
-		if(empty($this->rules['imageFileName']['maximumCharacters']))
-			$this->rules['imageFileName']['maximumCharacters'] = 100;
+		if(empty($this->rules['FileName']['maximumCharacters']))
+			$this->rules['FileName']['maximumCharacters'] = 100;
 
-		if(empty($this->rules['imageFileName']['minimumCharacters']))
-			$this->rules['imageFileName']['minimumCharacters'] = 1;
+		if(empty($this->rules['FileName']['minimumCharacters']))
+			$this->rules['FileName']['minimumCharacters'] = 1;
 	}
 
 	/**
@@ -54,7 +54,7 @@ class FileName{
 	 */
 	private function isAlphaNumerical( )
 	{
-		if(ctype_alnum(str_replace($this->rules['imageFileName']['allowed'], '', $this->fileName))) { 
+		if(ctype_alnum(str_replace($this->rules['FileName']['allowed'], '', $this->fileName))) {
 		    return true;
 		}
 		return false;
@@ -65,7 +65,7 @@ class FileName{
 	 */
 	private function isBetweenLength( )
 	{
-		if(strlen($this->fileName) >= $this->rules['imageFileName']['minimumCharacters'] and  strlen($this->fileName) <= $this->rules['imageFileName']['maximumCharacters']) { 
+		if(strlen($this->fileName) >= $this->rules['FileName']['minimumCharacters'] and  strlen($this->fileName) <= $this->rules['FileName']['maximumCharacters']) {
 		    return true;
 		}
 		return false;

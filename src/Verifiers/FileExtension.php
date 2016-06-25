@@ -30,8 +30,8 @@ class FileExtension{
 	 */
 	protected function setDefaultRules()
 	{
-		if(empty($this->rules['imageFileExtension']['allowed']))
-			$this->rules['imageFileExtension']['allowed'] = ['jpeg', 'jpg', 'png', 'gif'];
+		if(empty($this->rules['FileExtension']['allowed']))
+			$this->rules['FileExtension']['allowed'] = ['jpeg', 'jpg', 'png', 'gif'];
 	}
 
 	/**
@@ -46,7 +46,7 @@ class FileExtension{
 
 	public function valid()
 	{
-		if(in_array($this->fileExtension, $this->rules['imageFileExtension']['allowed'])){
+		if(in_array($this->fileExtension, $this->rules['FileExtension']['allowed'])){
 			return true;
 		}
 		return false;
